@@ -1,5 +1,5 @@
 # renparkn
-Recursively rename files in provided directory by adding the parent directory name while keeping the numbering (only first number in file name is kept).
+Recursively rename files in provided directory by adding the parent directory name while keeping the numbering (first number in file name is kept by default).
 
 ## Usage
 ```

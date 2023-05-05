@@ -8,7 +8,7 @@ use clap::Parser;
 use walkdir::WalkDir;
 
 /// renparkn: recursively rename files in provided directory by adding the parent directory
-/// name while keeping the numbering (only first number in file name is kept).
+/// name while keeping the numbering (first number in file name is kept by default).
 #[derive(Parser)]
 #[command(version, about, long_about = None)]
 struct Args {
