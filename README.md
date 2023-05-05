@@ -8,12 +8,13 @@ renparkn [OPTIONS] <DIR_PATH>
 
 #### Arguments
 ```
-<DIR_PATH>  path to directory with files to be renamed
+<DIR_PATH>  Path to directory with files to be renamed
 ```
 
 #### Options
 ```
--n, --dry-run      show rename proposal but do not apply
--h, --help         Print help
--V, --version      Print version
+-a, --num-after <STRING>  Extract numbering after provided string (case sensitive)
+-n, --dry-run             Show rename proposal but do not apply
+-h, --help                Print help
+-V, --version             Print version
 ```
