@@ -67,7 +67,7 @@ fn print_rename_proposal(rename_pairs: HashMap<PathBuf, Option<PathBuf>>) {
         if let Some(val) = v {
             println!("{} --> {}", k.display(), val.display());
         } else {
-            println!("renparkn: warning: unable to rename \"{}\"", k.display());
+            eprintln!("renparkn: warning: unable to rename \"{}\"", k.display());
             continue;
         }
     }
@@ -77,7 +77,7 @@ fn print_rename_proposal(rename_pairs: HashMap<PathBuf, Option<PathBuf>>) {
 fn rename_files(rename_pairs: HashMap<PathBuf, Option<PathBuf>>) {
     for (k, v) in rename_pairs {
         if v.is_none() || fs::rename(&k, v.unwrap()).is_err() {
-            println!("renparkn: warning: unable to rename \"{}\"", k.display());
+            eprintln!("renparkn: warning: unable to rename \"{}\"", k.display());
             continue;
         }
     }
@@ -88,7 +88,7 @@ fn main() {
 
     let dir_path = Path::new(&args.dir_path);
     if !(dir_path.exists() && dir_path.is_dir()) {
-        println!("renparkn: error: directory not found");
+        eprintln!("renparkn: error: directory not found");
         exit(1);
     }
 
